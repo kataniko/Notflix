@@ -3,93 +3,94 @@
 
 
 
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 80px;
-    background-color: transparent;
-    width: 100%;
-    
-   
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+  background-color: transparent;
+  width: 100%;
 }
 
-.logo{
-    text-decoration: none;
-    font-size: 40px;
-    cursor: pointer;
-    font-weight: bold;
-    color: rgb(254, 0, 0);
-    font-family: Cinzel;
-    letter-spacing: 0cap;
-    
- 
-}
-.logo span{
-    font-family: Cinzel;
-    color: white;
-    
+.logo {
+  text-decoration: none;
+  font-size: 40px;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(254, 0, 0);
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0cap;
+
+
 }
 
-.favs{
-    cursor:pointer;
-    text-decoration: none;
-    font-family: Cinzel;
-    font-weight: bolder;
-    font-size: 16px;
-    color: rgb(255, 0, 0);
+.logo span {
+  font-family: 'Cinzel', serif;
+  color: white;
 }
-.icon{
-    font-size: 40px;
-    position: relative;
-    top: 7px;
-    left:20px;
-    z-index: 1;
-    
+
+.favs {
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  font-weight: bolder;
+  font-size: 16px;
+  color: rgb(255, 0, 0);
 }
-.not{
-    position: relative;
-    z-index: 2;
+
+.icon {
+  font-size: 40px;
+  position: relative;
+  top: 7px;
+  left: 20px;
+  z-index: 1;
 }
-.button1{
-    background-color: transparent;
+
+.not {
+  position: relative;
+  z-index: 2;
+}
+
+.button1 {
+  background-color: transparent;
 }
 
 h1 {
-    color: hsl(0, 0%, 28%);
-    font-size: 50px;
-    font-weight: bold;
-    font-family: monospace;
-    letter-spacing: 7px;
-    cursor: pointer;
-   
-    
-  }
-.ban{
-    width: 300px;
+  color: hsl(0, 0%, 28%);
+  font-size: 50px;
+  font-weight: bold;
+  font-family: monospace;
+  letter-spacing: 7px;
+  cursor: pointer;
 }
-  
-  h1 span {
-    transition: 0.5s ease-out;
-  }
-  h1:hover span:nth-child(2) {
-    margin-left: 30px;
+
+.ban {
+  width: 300px;
+}
+
+h1 span {
+  transition: 0.5s ease-out;
+}
+
+h1:hover span:nth-child(2) {
+  margin-left: 30px;
+}
+
+h1:hover span {
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
   }
 
-  h1:hover span {
-    color: #fff;
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+  60% {
+    background-position: 600px;
   }
 
-  @keyframes shine {
-    0% {
-      background-position: 0;
-    }
-    60% {
-      background-position: 600px;
-    }
-    100% {
-      background-position: 600px;
-    }
+  100% {
+    background-position: 600px;
   }
-
+}

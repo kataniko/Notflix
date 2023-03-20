@@ -39,7 +39,7 @@ const Home = () => {
 
   if(!loading){
     return(
-        <LinearProgress color="error" />
+    <LinearProgress color="error" />
     )
   }
   return (
