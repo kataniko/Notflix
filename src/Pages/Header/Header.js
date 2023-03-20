@@ -13,7 +13,8 @@ const Header = () => {
           <Link className='logo' to="/">
             <GiAbstract050 className='icon' />
             <span className='not'>Not</span>
-            Flix</Link>
+            Flix
+          </Link>
         </h1>
       </div>
       <Link to="/favs"><Button sx={{ color: "white", borderColor: "white" }} variant="outlined">My Films</Button></Link>

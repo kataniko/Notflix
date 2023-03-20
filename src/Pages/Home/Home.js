@@ -1,13 +1,13 @@
 import React from 'react'
 import '../Home/Home.css'
 import api from '../../Services/api'
-
 import { useEffect, useState } from 'react';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import Grid2 from '@mui/material/Unstable_Grid2';
 import Carousel from '../Carousel/carousel'
-
+import { Link } from 'react-router-dom';
+import LinearProgress from '@mui/material/LinearProgress';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -18,6 +18,7 @@ import "swiper/css/pagination";
 const Home = () => {
 
   const [films, setFilms] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
 
@@ -36,6 +37,11 @@ const Home = () => {
 
   }, [])
 
+  if(!loading){
+    return(
+        <LinearProgress color="error" />
+    )
+  }
   return (
 
     <div className='container'>
@@ -48,10 +54,12 @@ const Home = () => {
           {films.map((film) => {
             return (
               <Grid2 xs={6}>
-                <ImageListItem sx={{ border: 2, borderColor: "error.main", boxShadow: 4, boxShadowColor: "Red" }} key={film.id}>
-                  <img src={`https://image.tmdb.org/t/p/original/${film.poster_path}`} alt={film.title} />
-                </ImageListItem>
-                <ImageListItemBar className='items' sx={{ color: "white", fontFamily: "Cinzel", fontWeight: "bold", textAlign: "center" }} position="below" title={film.title} />
+                <Link to={"/films:id"}>
+                  <ImageListItem sx={{ border: 2, borderColor: "error.main", boxShadow: 4, boxShadowColor: "Red" }} key={film.id}>
+                    <img src={`https://image.tmdb.org/t/p/original/${film.poster_path}`} alt={film.title} />
+                  </ImageListItem>
+                  <ImageListItemBar className='items' sx={{ color: "white", fontFamily: "Cinzel", fontWeight: "bold", textAlign: "center" }} position="below" title={film.title} />
+                </Link>
               </Grid2>
             )
           })}
