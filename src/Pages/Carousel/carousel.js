@@ -1,11 +1,7 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import api from '../../Services/api'
-import { Link } from 'react-router-dom'
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import Grid2 from '@mui/material/Unstable_Grid2';
 
 // Import Swiper styles
 import "swiper/css";

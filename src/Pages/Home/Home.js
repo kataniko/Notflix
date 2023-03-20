@@ -1,7 +1,7 @@
 import React from 'react'
 import '../Home/Home.css'
 import api from '../../Services/api'
-import { Link } from 'react-router-dom'
+
 import { useEffect, useState } from 'react';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
