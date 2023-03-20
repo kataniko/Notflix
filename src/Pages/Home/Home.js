@@ -55,11 +55,11 @@ const Home = () => {
             return (
               <Grid2 xs={6}>
                 <Link to={"/films:id"}>
-                  <ImageListItem sx={{ border: 2, borderColor: "error.main", boxShadow: 4, boxShadowColor: "Red" }} key={film.id}>
+                  <ImageListItem  key={film.id}>
                     <img src={`https://image.tmdb.org/t/p/original/${film.poster_path}`} alt={film.title} />
                   </ImageListItem>
-                  <ImageListItemBar className='items' sx={{ color: "white", fontFamily: "Cinzel", fontWeight: "bold", textAlign: "center" }} position="below" title={film.title} />
                 </Link>
+                  <ImageListItemBar className='items' sx={{ color: "white", fontFamily: "Cinzel", fontWeight: "bold", textAlign: "center"}} position="below" title={film.title} />
               </Grid2>
             )
           })}

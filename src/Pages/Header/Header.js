@@ -17,9 +17,12 @@ const Header = () => {
           </Link>
         </h1>
       </div>
-      <Link to="/favs"><Button sx={{ color: "white", borderColor: "white" }} variant="outlined">My Films</Button></Link>
+      <Link to="/favs">
+        <Button className='button' sx={{ color: "white", borderColor: "white", textDecoration:"none"}} color='error' variant="outlined">
+        My Films
+        </Button>
+      </Link>
     </header>
   )
 }
-
 export default Header

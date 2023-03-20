@@ -3,13 +3,9 @@ import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import api from '../../Services/api';
 import {Link } from 'react-router-dom';
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-
-
 import "./styles.css";
 
 // import required modules
@@ -59,7 +55,7 @@ export default function App() {
                     return (
                         <SwiperSlide>
                             <Link className='logo' to="/films:id">
-                                <img src={`https://image.tmdb.org/t/p/original/${film.poster_path}`} alt={film.title} />
+                                <img className="borders" src={`https://image.tmdb.org/t/p/original/${film.poster_path}`} alt={film.title} />
                             </Link>
                         </SwiperSlide>
                     )
