@@ -1,0 +1,51 @@
+.background-containerr {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: rgb(255, 255, 255) ;
+    
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .containerr {
+    max-width:100%;
+    max-height: 100%;
+    height: 50vw;
+    width: 50vw;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  @media (max-width: 600px)
+{
+  .background-containerr {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: rgb(255, 255, 255) ;
+    
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .containerr {
+    max-width:100%;
+    max-height: 100%;
+    height: 250vw;
+    width: 250vw;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+
+ 
+}
+
+
+
+  
