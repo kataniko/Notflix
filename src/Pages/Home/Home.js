@@ -61,7 +61,7 @@ const Home = () => {
         <Grid2 sx={{ margin: 2, display:"flex" , justifyContent:"center" }} container spacing={3}>
           {films.map((film) => {
             return (
-              <Grid2 sx={{display:"flex",justifyContent:"center"}} md={4}>
+              <Grid2 sx={{display:"flex",justifyContent:"center"}} md={3}>
                 <Box
                   sx={{
                     perspective: '1000px',
