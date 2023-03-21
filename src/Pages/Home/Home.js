@@ -13,6 +13,14 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
+//mui
+import Box from '@mui/joy/Box';
+import Card from '@mui/joy/Card';
+import CardCover from '@mui/joy/CardCover';
+import CardContent from '@mui/joy/CardContent';
+import Typography from '@mui/joy/Typography';
+
+
 //https://api.themoviedb.org/3/movie/550?api_key=878f50dfcec80fb4a31c7bf1527cc55d
 
 const Home = () => {
@@ -37,9 +45,9 @@ const Home = () => {
 
   }, [])
 
-  if(!loading){
-    return(
-    <LinearProgress color="error" />
+  if (!loading) {
+    return (
+      <LinearProgress color="error" />
     )
   }
   return (
@@ -50,16 +58,70 @@ const Home = () => {
 
       <div className='list'>
 
-        <Grid2 sx={{ margin: 2 }} container spacing={3}>
+        <Grid2 sx={{ margin: 2, display:"flex" , justifyContent:"center" }} container spacing={3}>
           {films.map((film) => {
             return (
-              <Grid2 xs={6}>
-                <Link to={"/films:id"}>
-                  <ImageListItem  key={film.id}>
-                    <img src={`https://image.tmdb.org/t/p/original/${film.poster_path}`} alt={film.title} />
-                  </ImageListItem>
-                </Link>
-                  <ImageListItemBar className='items' sx={{ color: "white", fontFamily: "Cinzel", fontWeight: "bold", textAlign: "center"}} position="below" title={film.title} />
+              <Grid2 sx={{display:"flex",justifyContent:"center"}} md={4}>
+                <Box
+                  sx={{
+                    perspective: '1000px',
+                    transition: 'transform 0.4s',
+                    '& > div, & > div > div': {
+                      transition: 'inherit',
+                    },
+                    '&:hover': {
+                      '& > div': {
+                        transform: 'rotateY(30deg)',
+                        '& > div:nth-child(2)': {
+                          transform: 'scaleY(0.9) translate3d(20px, 30px, 40px)',
+                        },
+                        '& > div:nth-child(3)': {
+                          transform: 'translate3d(45px, 50px, 40px)',
+                        },
+                      },
+                    },
+                  }}
+                >
+                  <Card
+                    variant="outlined"
+                    sx={{
+                      minHeight: '280px',
+                      width: 320,
+                      backgroundColor: 'transparent',
+                      borderColor: 'red',
+                    }}
+                  >
+                    <Link to={"/films:id"}>
+                      <ImageListItem key={film.id}>
+                        <img src={`https://image.tmdb.org/t/p/original/${film.poster_path}`} alt={film.title} />
+                      </ImageListItem>
+                    </Link>
+                    <CardCover
+                      sx={{
+                        background:
+                          'linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0) 200px), linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0) 300px)',
+                        border: '1px solid',
+                        borderColor: '#777',
+                      }}
+                    >
+                     
+                    </CardCover>
+
+                    <CardContent
+                      sx={{
+                        alignItems: 'self-end',
+                        justifyContent: 'flex-end',
+                        background: 'linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.3))',
+                        border: '1px solid',
+                        borderColor: '#000',
+                      }}
+                    >
+                      
+                      <ImageListItemBar sx={{ color: "white", fontFamily: "Cinzel", fontWeight: "bold", textAlign: "center" }} position="below" title={film.title} />
+
+                    </CardContent>
+                  </Card>
+                </Box>
               </Grid2>
             )
           })}
@@ -70,5 +132,4 @@ const Home = () => {
 }
 
 export default Home
-
 

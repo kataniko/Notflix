@@ -1331,7 +1331,7 @@
 
 "@emotion/react@^11.10.6":
   version "11.10.6"
-  resolved "https://registry.npmjs.org/@emotion/react/-/react-11.10.6.tgz"
+  resolved "https://registry.yarnpkg.com/@emotion/react/-/react-11.10.6.tgz#dbe5e650ab0f3b1d2e592e6ab1e006e75fd9ac11"
   integrity sha512-6HT8jBmcSkfzO7mc+N1L9uwvOnlcGoix8Zn7srt+9ga0MjREo6lRpuVX0kzo6Jp6oTqDhREOFsygN6Ew4fEQbw==
   dependencies:
     "@babel/runtime" "^7.18.3"
@@ -1361,7 +1361,7 @@
 
 "@emotion/styled@^11.10.6":
   version "11.10.6"
-  resolved "https://registry.npmjs.org/@emotion/styled/-/styled-11.10.6.tgz"
+  resolved "https://registry.yarnpkg.com/@emotion/styled/-/styled-11.10.6.tgz#d886afdc51ef4d66c787ebde848f3cc8b117ebba"
   integrity sha512-OXtBzOmDSJo5Q0AFemHCfl+bUueT8BIcPSxu0EGTpGk6DmI5dnhSzQANm1e1ze0YZL7TDyAyy6s/b/zmGOS3Og==
   dependencies:
     "@babel/runtime" "^7.18.3"
@@ -1881,6 +1881,22 @@
   version "5.11.13"
   resolved "https://registry.npmjs.org/@mui/core-downloads-tracker/-/core-downloads-tracker-5.11.13.tgz"
   integrity sha512-lx+GXBR9h/ApZsEP728tl0pyZyuajto+VnBgsoAzw1d5+CbmOo8ZWieKwVUGxZlPT1wMYNUYS5NtKzCli0xYjw==
+
+"@mui/joy@^5.0.0-alpha.71":
+  version "5.0.0-alpha.71"
+  resolved "https://registry.yarnpkg.com/@mui/joy/-/joy-5.0.0-alpha.71.tgz#ee817506cdb948437b433e5c77d43643062f9c43"
+  integrity sha512-QPEklEx8RX2nDMY0Q9836ATufAw8nSiuNF2Ae4I42uQMLTEYZlCHVTOx6Es1oMaAq7ukviOgtJo2KwjmQsgefw==
+  dependencies:
+    "@babel/runtime" "^7.21.0"
+    "@mui/base" "5.0.0-alpha.121"
+    "@mui/core-downloads-tracker" "^5.11.13"
+    "@mui/system" "^5.11.13"
+    "@mui/types" "^7.2.3"
+    "@mui/utils" "^5.11.13"
+    clsx "^1.2.1"
+    csstype "^3.1.1"
+    prop-types "^15.8.1"
+    react-is "^18.2.0"
 
 "@mui/material@^5.11.13":
   version "5.11.13"
@@ -10739,7 +10755,7 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0, nested-error-stacks@^2.1
 
 netlify-cli@^13.1.6:
   version "13.1.6"
-  resolved "https://registry.yarnpkg.com/netlify-cli/-/netlify-cli-13.1.6.tgz#0b7ec07a94daabbff495365bb8d94ab23d15958e"
+  resolved "https://registry.npmjs.org/netlify-cli/-/netlify-cli-13.1.6.tgz"
   integrity sha512-dn9NYfLLzBi/Bph9wccpbR/90Yh6xutHzdl9J06XfcYsgpQOhEE9qAHUppzzJnHXUJEi7PAMo0lkXExvVO4zhA==
   dependencies:
     "@fastify/static" "^6.6.0"
