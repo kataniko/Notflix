@@ -88,8 +88,8 @@ const Films = () => {
               backgroundColor: 'transparent',
               borderColor: 'red',
               marginTop: 10,
-              boxShadow:"2px 2px 20px red",
-            
+              boxShadow: "2px 2px 20px red",
+
             }}
           >
             <ImageListItem key={film.id}>
@@ -117,24 +117,28 @@ const Films = () => {
             </CardContent>
           </Card>
         </Box>
-      
+
         <Card2 className='card'>
 
           <div className='border2'>
 
-          <CardContent2>
+            <CardContent2>
 
-            <Typography sx={{fontFamily:"Cinzel" , maxWidth:"600px"}}  variant="h5" color="red" gutterBottom>
-              Overview:<p style={{fontSize:"20px", color:"white"}}>{film.overview}</p>
-            </Typography>
+              <Typography sx={{ fontFamily: "Cinzel", maxWidth: "600px" }} variant="h5" color="red" gutterBottom>
+                Overview:<p style={{ fontSize: "20px", color: "white" }}>{film.overview}</p>
+              </Typography>
 
-            <Typography variant="h5" color="yellow" component="div">
-              <SiImdb style={{fontSize:"30px", color:"red"}}/> : {film.vote_average}
-            </Typography>
-          </CardContent2>
-          <CardActions>
-            <Button sx={{color:"red"}} size="small">Learn More</Button>
-          </CardActions>
+              <Typography variant="h5" color="yellow" component="div">
+                <SiImdb style={{ fontSize: "30px", color: "red" }} /> : {film.vote_average}
+              </Typography>
+            </CardContent2>
+            <CardActions>
+              <Button sx={{ color: "red" }} size="small">
+                <a target="blank" rel="external" href={`https://youtube.com/results?search_query=${filme.title} Trailer`}>
+                  Trailer
+                </a>
+              </Button>
+            </CardActions>
           </div>
         </Card2>
 
@@ -160,11 +164,11 @@ const Films = () => {
               backgroundColor: 'transparent',
               borderColor: 'red',
               marginTop: 10,
-              boxShadow:"2px 2px 20px red",
-            
+              boxShadow: "2px 2px 20px red",
+
             }}
           >
-            <Typography sx={{fontFamily:"Cinzel" , fontWeight:"bold"}}  variant="h4" color="white" gutterBottom>
+            <Typography sx={{ fontFamily: "Cinzel", fontWeight: "bold" }} variant="h4" color="white" gutterBottom>
               {film.title}
             </Typography>
 
