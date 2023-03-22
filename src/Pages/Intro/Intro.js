@@ -2,84 +2,84 @@ import React from 'react';
 import { useTrail, useChain, useSprings, animated, useSpringRef } from '@react-spring/web'
 import '../Intro/Intro.css';
 import { ContextState } from '../contexts/ContextApi';
-import {motion} from 'framer-motion';
-import { Typography } from '@mui/joy';
+import { motion } from 'framer-motion';
+import { Typography } from '@mui/material';
 
-const COORDS = [ 
-    [80,30],
-    [80,40],
-    [80,50],
-    [80,60],
-    [80,70],
-    [80,80],
-    [80,90],
-    [80,100],
-    [80,110],
-    [80,120],
-    [80,130],
-    [80,140],
-    [80,150],
-    [80,160],
-    [90,160],
-    [100,160],
-    [110,160],
-    [120,160],
-    [130,30],
-    [130,40],
-    [130,50],
-    [130,100],
-    [130,110],
-    [130,120],
-    [130,130],
-    [130,140],
-    [130,150],
-    [130,160],
-    [120,30],
-    [110,30],
-    [100,30],
-    [90,30],
-    [130,110],
-    [140,120],
-    [150,130],
-    [160,140],
-    [170,150],
-    [180,160],
-    [190,160],
-    [200,160],
-    [210,160],
-    [220,30],
-    [220,40],
-    [220,50],
-    [220,60],
-    [220,70],
-    [220,80],
-    [220,90],
-    [220,100],
-    [220,110],
-    [220,120],
-    [220,130],
-    [220,140],
-    [220,150],
-    [220,160],
-    [140,50],
-    [150,60],
-    [160,70],
-    [170,80],
-    [180,30],
-    [190,30],
-    [200,30],
-    [210,30],
-    [180 , 40],
-    [180 ,50],
-    [180 , 60],
-    [180 , 70],
-    [180 , 80],
-    
-
- ]
+const COORDS = [
+    [80, 30],
+    [80, 40],
+    [80, 50],
+    [80, 60],
+    [80, 70],
+    [80, 80],
+    [80, 90],
+    [80, 100],
+    [80, 110],
+    [80, 120],
+    [80, 130],
+    [80, 140],
+    [80, 150],
+    [80, 160],
+    [90, 160],
+    [100, 160],
+    [110, 160],
+    [120, 160],
+    [130, 30],
+    [130, 40],
+    [130, 50],
+    [130, 100],
+    [130, 110],
+    [130, 120],
+    [130, 130],
+    [130, 140],
+    [130, 150],
+    [130, 160],
+    [120, 30],
+    [110, 30],
+    [100, 30],
+    [90, 30],
+    [130, 110],
+    [140, 120],
+    [150, 130],
+    [160, 140],
+    [170, 150],
+    [180, 160],
+    [190, 160],
+    [200, 160],
+    [210, 160],
+    [220, 30],
+    [220, 40],
+    [220, 50],
+    [220, 60],
+    [220, 70],
+    [220, 80],
+    [220, 90],
+    [220, 100],
+    [220, 110],
+    [220, 120],
+    [220, 130],
+    [220, 140],
+    [220, 150],
+    [220, 160],
+    [140, 50],
+    [150, 60],
+    [160, 70],
+    [170, 80],
+    [180, 30],
+    [190, 30],
+    [200, 30],
+    [210, 30],
+    [180, 40],
+    [180, 50],
+    [180, 60],
+    [180, 70],
+    [180, 80],
 
 
-const STROKE_WIDTH = 0.2;
+]
+
+
+const STROKE_WIDTH = 0.4;
 
 const OFFSET = STROKE_WIDTH / 1;
 
@@ -109,25 +109,25 @@ function Intro() {
 
         ref: boxApi,
         from: {
-            scale: 0,
+            scale: 0.3,
         },
         to: {
-            scale: 0.7,
+            scale: 1,
         },
-        delay: i * 100,
+        delay: i * 50,
         config: {
-            mass: 2,
-            tension: 220,
+            mass: 50,
+            tension: 300,
         },
 
     }));
 
     useChain([gridApi, boxApi], [0, 1], 1500);
 
-    
+
 
     return (
-        <motion.div initial={{z: 0,opacity: 0,scale: 3,}} animate={{ x: 0,opacity: 1,scale: 1,}} transition={{duration: 5,}} className='background-containerr'>
+        <motion.div initial={{ z: 0, opacity: 0, scale: 0.5, }} animate={{ x: 0, opacity: 1, scale: 0.3 }} transition={{ duration: 5, }} className='background-containerr'>
             <div className='containerr' onClick={() => setEstado(true)}>
                 <svg className='box' viewBox={`0 0 ${MAX_WIDTH} ${MAX_HEIGHT}`}>
                     <g>
@@ -140,6 +140,9 @@ function Intro() {
                                 key={index}
                                 strokeWidth={STROKE_WIDTH}
                                 stroke="currentColor"
+                                style={{ color: "red" }}
+
+
                             />
                         ))}
                         {gridSprings.map(({ y2 }, index) => (
@@ -151,6 +154,9 @@ function Intro() {
                                 key={index}
                                 strokeWidth={STROKE_WIDTH}
                                 stroke="currentColor"
+                                style={{ color: "red" }}
+
+
                             />
                         ))}
                     </g>
@@ -163,12 +169,13 @@ function Intro() {
                             style={{
                                 transformOrigin: `${5 + OFFSET * 2}px ${5 + OFFSET * 2}px`,
                                 transform: `translate(${COORDS[index][0] + OFFSET}px, ${COORDS[index][1] + OFFSET}px)`,
-                                scale,
+                                scale, color: "black",
                             }}
                         />
                     ))}
                 </svg>
             </div>
+
         </motion.div>
     );
 }
