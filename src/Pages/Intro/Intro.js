@@ -177,18 +177,18 @@ function Intro() {
                             />
                         ))}
                     </svg>
-                </div>
-                <div onClick={() => setEstado(true)}>
-                    <div className='start'>
-                        <Button sx={{ fontSize: "80px", fontFamily: "Montserrat", color: "darkred", marginTop: "80px" }}>
-                            Start
-                        </Button>
-                    </div>
+                    <div onClick={() => setEstado(true)}>
+                        <div className='start'>
+                            <Button sx={{ fontSize: "80px", fontFamily: "Montserrat", color: "darkred", marginTop: "80px" }}>
+                                Start
+                            </Button>
+                        </div>
 
-                    <div class="arrow">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <div class="arrow">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
                 </div>
 
