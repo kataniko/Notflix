@@ -80,16 +80,13 @@ const Films = () => {
             },
           }}
         >
-          <Card
+          <Card className="card2"
             variant="outlined"
             sx={{
               minHeight: '280px',
               width: 400,
               backgroundColor: 'transparent',
-              borderColor: 'red',
               marginTop: 10,
-              boxShadow: "2px 2px 20px red",
-
             }}
           >
             <ImageListItem key={film.id}>
@@ -134,7 +131,7 @@ const Films = () => {
             </CardContent2>
             <CardActions>
               <Button sx={{ color: "red" }} size="small">
-                <a target="blank" rel="external" href={`https://youtube.com/results?search_query=${filme.title} Trailer`}>
+                <a target="blank" rel="external" href={`https://youtube.com/results?search_query=${film.title} Trailer`}>
                   Trailer
                 </a>
               </Button>
@@ -156,16 +153,13 @@ const Films = () => {
             },
           }}
         >
-          <Card
+          <Card className="card3"
             variant="outlined"
             sx={{
               minHeight: '500px',
               width: 400,
               backgroundColor: 'transparent',
-              borderColor: 'red',
               marginTop: 10,
-              boxShadow: "2px 2px 20px red",
-
             }}
           >
             <Typography sx={{ fontFamily: "Cinzel", fontWeight: "bold" }} variant="h4" color="white" gutterBottom>
