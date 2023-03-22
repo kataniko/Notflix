@@ -123,7 +123,7 @@ const Films = () => {
 
           <CardContent2>
             <Typography sx={{fontFamily:"Cinzel" , fontWeight:"bold"}}  variant="h4" color="white" gutterBottom>
-              {film.synopse}
+              {film.desc}
             </Typography>
             <Typography variant="h5" color="white" component="div">
               besdsd

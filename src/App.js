@@ -10,7 +10,9 @@ function App() {
     <div className="App">
       {estado ? (
         <RouteApp />
-      ) : (<Intro />)}
+      ) : (
+      <Intro />
+      )}
     </div>
   );
 }

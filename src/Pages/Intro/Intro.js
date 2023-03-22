@@ -3,7 +3,8 @@ import { useTrail, useChain, useSprings, animated, useSpringRef } from '@react-s
 import '../Intro/Intro.css';
 import { ContextState } from '../contexts/ContextApi';
 import { motion } from 'framer-motion';
-import { Typography } from '@mui/material';
+import { Button } from '@mui/material';
+import { FaArrowUp } from 'react-icons/fa'
 
 const COORDS = [
     [80, 30],
@@ -127,56 +128,72 @@ function Intro() {
 
 
     return (
-        <motion.div initial={{ z: 0, opacity: 0, scale: 0.5, }} animate={{ x: 0, opacity: 1, scale: 0.3 }} transition={{ duration: 5, }} className='background-containerr'>
-            <div className='containerr' onClick={() => setEstado(true)}>
-                <svg className='box' viewBox={`0 0 ${MAX_WIDTH} ${MAX_HEIGHT}`}>
-                    <g>
-                        {gridSprings.map(({ x2 }, index) => (
-                            <animated.line
-                                x1={0}
-                                y1={index * 10 + OFFSET}
-                                x2={x2}
-                                y2={index * 10 + OFFSET}
+        <div style={{ display: "flex", justifyContent: "center" }}>
+            <motion.div initial={{ z: 0, opacity: 0, scale: 0.5, }} animate={{ x: 0, opacity: 1, scale: 0.3 }} transition={{ duration: 5, }} className='background-containerr'>
+                <div className='containerr'>
+                    <svg className='box' viewBox={`0 0 ${MAX_WIDTH} ${MAX_HEIGHT}`}>
+                        <g>
+                            {gridSprings.map(({ x2 }, index) => (
+                                <animated.line
+                                    x1={0}
+                                    y1={index * 10 + OFFSET}
+                                    x2={x2}
+                                    y2={index * 10 + OFFSET}
+                                    key={index}
+                                    strokeWidth={STROKE_WIDTH}
+                                    stroke="currentColor"
+                                    style={{ color: "red", textShadow: "2px 2px 20px red" }}
+
+
+                                />
+                            ))}
+                            {gridSprings.map(({ y2 }, index) => (
+                                <animated.line
+                                    x1={index * 10 + OFFSET}
+                                    y1={0}
+                                    x2={index * 10 + OFFSET}
+                                    y2={y2}
+                                    key={index}
+                                    strokeWidth={STROKE_WIDTH}
+                                    stroke="currentColor"
+                                    style={{ color: "red", textShadow: "2px 2px 20px red" }}
+
+
+
+                                />
+                            ))}
+                        </g>
+                        {boxSprings.map(({ scale }, index) => (
+                            <animated.rect
                                 key={index}
-                                strokeWidth={STROKE_WIDTH}
-                                stroke="currentColor"
-                                style={{ color: "red" }}
-
-
+                                width={10}
+                                height={10}
+                                fill="currentColor"
+                                style={{
+                                    transformOrigin: `${5 + OFFSET * 2}px ${5 + OFFSET * 2}px`,
+                                    transform: `translate(${COORDS[index][0] + OFFSET}px, ${COORDS[index][1] + OFFSET}px)`,
+                                    scale, color: "black"
+                                }}
                             />
                         ))}
-                        {gridSprings.map(({ y2 }, index) => (
-                            <animated.line
-                                x1={index * 10 + OFFSET}
-                                y1={0}
-                                x2={index * 10 + OFFSET}
-                                y2={y2}
-                                key={index}
-                                strokeWidth={STROKE_WIDTH}
-                                stroke="currentColor"
-                                style={{ color: "red" }}
+                    </svg>
+                </div>
+                <div onClick={() => setEstado(true)}>
+                    <div className='start'>
+                        <Button sx={{ fontSize: "80px", fontFamily: "Montserrat", color: "darkred", marginTop: "80px" }}>
+                            Start
+                        </Button>
+                    </div>
 
+                    <div class="arrow">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
 
-                            />
-                        ))}
-                    </g>
-                    {boxSprings.map(({ scale }, index) => (
-                        <animated.rect
-                            key={index}
-                            width={10}
-                            height={10}
-                            fill="currentColor"
-                            style={{
-                                transformOrigin: `${5 + OFFSET * 2}px ${5 + OFFSET * 2}px`,
-                                transform: `translate(${COORDS[index][0] + OFFSET}px, ${COORDS[index][1] + OFFSET}px)`,
-                                scale, color: "black",
-                            }}
-                        />
-                    ))}
-                </svg>
-            </div>
-
-        </motion.div>
+            </motion.div>
+        </div>
     );
 }
 
