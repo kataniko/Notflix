@@ -124,12 +124,12 @@ const Films = () => {
 
           <CardContent2>
 
-            <Typography sx={{fontFamily:"Cinzel" , maxWidth:"600px"}}  variant="h5" color="white" gutterBottom>
-              Overview:<p style={{fontSize:"20px"}}>{film.overview}</p>
+            <Typography sx={{fontFamily:"Cinzel" , maxWidth:"600px"}}  variant="h5" color="red" gutterBottom>
+              Overview:<p style={{fontSize:"20px", color:"white"}}>{film.overview}</p>
             </Typography>
 
             <Typography variant="h5" color="yellow" component="div">
-              <SiImdb style={{fontSize:"30px"}}/> : {film.vote_average}
+              <SiImdb style={{fontSize:"30px", color:"red"}}/> : {film.vote_average}
             </Typography>
           </CardContent2>
           <CardActions>
