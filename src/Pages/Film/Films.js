@@ -25,7 +25,7 @@ import Box from '@mui/joy/Box';
 import Card from '@mui/joy/Card';
 import CardCover from '@mui/joy/CardCover';
 import CardContent from '@mui/joy/CardContent';
-import { red } from '@mui/material/colors';
+import { SiImdb } from 'react-icons/si'
 
 
 const Films = () => {
@@ -119,14 +119,17 @@ const Films = () => {
         </Box>
       
         <Card2 className='card'>
+          
           <div className='border2'>
 
           <CardContent2>
-            <Typography sx={{fontFamily:"Cinzel" , fontWeight:"bold"}}  variant="h4" color="white" gutterBottom>
-              {film.desc}
+
+            <Typography sx={{fontFamily:"Cinzel" , maxWidth:"600px"}}  variant="h5" color="white" gutterBottom>
+              Overview:<p style={{fontSize:"20px"}}>{film.overview}</p>
             </Typography>
+
             <Typography variant="h5" color="white" component="div">
-              besdsd
+              <SiImdb style={{fontSize:"30px"}}/> : {film.vote_average}
             </Typography>
           </CardContent2>
           <CardActions>
@@ -152,7 +155,7 @@ const Films = () => {
           <Card
             variant="outlined"
             sx={{
-              minHeight: '280px',
+              minHeight: '500px',
               width: 400,
               backgroundColor: 'transparent',
               borderColor: 'red',
@@ -164,37 +167,7 @@ const Films = () => {
             <Typography sx={{fontFamily:"Cinzel" , fontWeight:"bold"}}  variant="h4" color="white" gutterBottom>
               {film.title}
             </Typography>
-            <Typography variant="h5" color="white" component="div">
-              besdsd
-            </Typography>
-            <Typography sx={{ mb: 1.5 }}color="white">
-              adjective
-            </Typography>
-            <Typography variant="body2">
-              well meaning and kindly.
-              <br />
-              {'"a benevolent smile"'}
-            </Typography>
 
-            <CardCover
-              sx={{
-                background:
-                  'linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0) 200px), linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0) 300px)',
-                border: '1px solid',
-                borderColor: '#777',
-              }}
-            >
-            </CardCover>
-            <CardContent
-              sx={{
-                alignItems: 'self-end',
-                justifyContent: 'flex-end',
-                background: 'linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.3))',
-                border: '1px solid ',
-                borderColor: '#000',
-              }}
-            >
-            </CardContent>
           </Card>
         </Box>
 
