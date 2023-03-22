@@ -119,7 +119,7 @@ const Films = () => {
         </Box>
       
         <Card2 className='card'>
-          
+
           <div className='border2'>
 
           <CardContent2>
@@ -128,12 +128,12 @@ const Films = () => {
               Overview:<p style={{fontSize:"20px"}}>{film.overview}</p>
             </Typography>
 
-            <Typography variant="h5" color="white" component="div">
+            <Typography variant="h5" color="yellow" component="div">
               <SiImdb style={{fontSize:"30px"}}/> : {film.vote_average}
             </Typography>
           </CardContent2>
           <CardActions>
-            <Button size="small">Learn More</Button>
+            <Button sx={{color:"red"}} size="small">Learn More</Button>
           </CardActions>
           </div>
         </Card2>
