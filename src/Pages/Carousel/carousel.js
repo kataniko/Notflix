@@ -8,9 +8,8 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "./styless.css";
 import { motion } from 'framer-motion';
-
-// import required modules
 import { EffectCoverflow, Pagination } from "swiper";
+
 
 export default function App() {
 

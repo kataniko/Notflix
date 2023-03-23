@@ -21,7 +21,7 @@ const Header = () => {
       </motion.div>
       
       <motion.div initial={{ z: 0, opacity: 0, scale: 1, }} animate={{ x: 0, opacity: 1, scale: 1 }} transition={{ duration: 3, }}>
-        <Link to="/favs">
+        <Link to="/film/favs">
           <Button className='button' sx={{ color: "white", borderColor: "white", textDecoration: "none" }} color='error' variant="outlined">
             My Films
           </Button>

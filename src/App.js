@@ -1,6 +1,8 @@
 import RouteApp from './RouteApp';
 import Intro from '../src/Pages/Intro/Intro'
 import {ContextState} from './Pages/contexts/ContextApi';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -8,6 +10,7 @@ function App() {
 
   return (
     <div className="App">
+      <ToastContainer autoClose={3000}/>
       {estado ? (
         <RouteApp />
       ) : (
@@ -18,3 +21,4 @@ function App() {
 }
 
 export default App;
+

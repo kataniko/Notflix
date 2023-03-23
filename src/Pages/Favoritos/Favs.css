@@ -1,0 +1,37 @@
+.meus-filmes{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .meus-filmes div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .meus-filmes div a {
+    text-decoration: none;
+    margin-right: 24px;
+    margin-left: 24px;
+  }
+
+  .card4{
+    --b: 5px; /* border thickness */
+    --c: #01010100 25%,rgb(255, 0, 0) 0; /* define the color here */
+    padding: 10px;
+    background:
+      conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--c)) 0    0,
+      conic-gradient(from 180deg at top    var(--b) right var(--b),var(--c)) 100% 0,
+      conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--c)) 0    100%,
+      conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--c)) 100% 100%;
+    background-size: 30px 30px; /* adjust border length here */
+    background-repeat: no-repeat;
+    transition: .6s !important;
+    cursor: pointer;
+}
+
+.card4:hover{
+    background-size: 51% 51%;
+}
