@@ -13,15 +13,15 @@ const COORDS = [
     [110, 160], [120, 160],
     [130, 30], [130, 40], [130, 50],
     [130, 100], [130, 110],
-     [130, 120],[130, 130], 
-     [130, 140],[130, 150],
+    [130, 120], [130, 130],
+    [130, 140], [130, 150],
     [130, 160], [120, 30],
-    [110, 30],[100, 30],
+    [110, 30], [100, 30],
     [90, 30], [130, 110],
     [140, 120], [150, 130],
-     [160, 140], [170, 150],
+    [160, 140], [170, 150],
     [180, 160], [190, 160],
-     [200, 160], [210, 160],
+    [200, 160], [210, 160],
     [220, 30], [220, 40],
     [220, 50], [220, 60],
     [220, 70], [220, 80], [220, 90],
@@ -84,6 +84,16 @@ function Intro() {
 
     return (
         <div style={{ display: "flex", justifyContent: "center" }}>
+
+
+            <div class="lines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+    
+            </div>
+
+
             <motion.div initial={{ z: 0, opacity: 0, scale: 0.5, }} animate={{ x: 0, opacity: 1, scale: 0.3 }} transition={{ duration: 5, }} className='background-containerr'>
                 <div className='containerr'>
                     <svg className='box' viewBox={`0 0 ${MAX_WIDTH} ${MAX_HEIGHT}`}>
