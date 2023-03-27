@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 .background-containerr {
-  width: 1920px;
-  height: 940px;
+  width: 100%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0);
   color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
 }
 
 .containerr {
@@ -24,33 +24,6 @@
 
 }
 
-.arrow {
-  position: absolute;
-  top: 89%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  transform: rotate(-90deg);
-  cursor: pointer;
-}
-
-.arrow span {
-  display: block;
-  width: 1.5vw;
-  height: 1.5vw;
-  border-bottom: 5px solid rgb(255, 255, 255);
-  border-right: 5px solid rgb(255, 0, 0);
-  transform: rotate(45deg);
-  margin: -10px;
-  animation: animate 2s infinite;
-}
-
-.arrow span:nth-child(2) {
-  animation-delay: -0.2s;
-}
-
-.arrow span:nth-child(3) {
-  animation-delay: -0.4s;
-}
 
 
 .lines {
@@ -146,9 +119,13 @@ top: 110%;
     height: 100%;
   }
 
+  .container3{
+    margin-top: 50px;
+  }
   .arrow {
     top: 70%;
-    left: 50%;
+    transform: rotate(-90deg);
+    left: 70%;
   }
 
   .arrow span {
@@ -157,7 +134,6 @@ top: 110%;
     height: 4.5vw;
     border-bottom: 5px solid rgb(255, 255, 255);
     border-right: 5px solid rgb(140, 0, 0);
-    transform: rotate(45deg);
     margin: -10px;
     animation: animate 2s infinite;
   }

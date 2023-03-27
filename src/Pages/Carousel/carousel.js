@@ -36,6 +36,7 @@ export default function App() {
         <>
             <motion.div initial={{ z: 0, opacity: 0, scale: 1, }} animate={{ x: 0, opacity: 1, scale: 1 }} transition={{ duration: 5, }}>
                 <Swiper
+                initialSlide={4}
                     effect={"coverflow"}
                     grabCursor={true}
                     centeredSlides={true}
@@ -50,6 +51,7 @@ export default function App() {
                     pagination={true}
                     modules={[EffectCoverflow, Pagination]}
                     className="mySwiper"
+                    defaultIndex={Math.floor(films.length / 2)} // set default index to the middle slide
                 >
 
                     {films.map((film) => {

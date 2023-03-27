@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState,} from 'react';
 import '../Favoritos/Favs.css';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify'
@@ -11,6 +11,7 @@ import { Button, CardActionArea } from '@mui/material';
 
 function Favs() {
   const [films, setFilms] = useState([])
+  
 
   useEffect(() => {
 
@@ -48,6 +49,7 @@ function Favs() {
                   <Button onClick={excluirFilme} className='button' sx={{ color: "white", borderColor: "red", textDecoration: "none" }} color='error' variant="outlined">
                     Delete
                   </Button>
+
                 </div>
 
               </CardContent>

@@ -90,7 +90,7 @@ function Intro() {
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
-    
+
             </div>
 
 
@@ -148,11 +148,12 @@ function Intro() {
                                 Start
                             </Button>
                         </div>
-
-                        <div class="arrow">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                        <div className='container3'>
+                            <div class="arrow">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
                         </div>
                     </div>
                 </div>

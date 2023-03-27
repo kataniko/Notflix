@@ -150,7 +150,7 @@ const Films = () => {
                   Overview:<p style={{ fontSize: "20px", color: "white" }}>{film.overview}</p>
                 </Typography>
 
-                <Typography variant="h5" color="yellow" component="div">
+                <Typography variant="h5" color="white" component="div">
                   <SiImdb style={{ fontSize: "30px", color: "red" }} /> : {film.vote_average}
                 </Typography>
               </CardContent2>
@@ -193,7 +193,7 @@ const Films = () => {
                 marginTop: 10,
               }}
             >
-              <Typography sx={{ fontFamily: "Cinzel", fontWeight: "bold" }} variant="h4" color="white" gutterBottom>
+              <Typography sx={{ fontFamily: "Cinzel", fontWeight: "bold", textAlign:"center" }} variant="h4" color="white" gutterBottom>
                 {film.title}
               </Typography>
             </Card>

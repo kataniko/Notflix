@@ -18,7 +18,7 @@
     transition: .6s;
     cursor: pointer;
 
-    
+
 } 
 
 
@@ -59,8 +59,16 @@ padding: 10px;
     background-repeat: no-repeat;
     transition: .6s !important;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card3:hover{
     background-size: 51% 51%;
+}
+@media (max-width: 600px) {
+  .card3{
+    margin-top: 150px;
+  }
 }
