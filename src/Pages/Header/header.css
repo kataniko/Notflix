@@ -33,6 +33,9 @@ header {
   font-size: 16px;
   color: rgb(255, 0, 0);
 }
+.button{
+  text-decoration: none;
+}
 
 .icon {
   font-size: 40px;
@@ -58,6 +61,7 @@ h1 {
   font-family: 'Cinzel';
   letter-spacing: 7px;
   cursor: pointer;
+  text-decoration: none !important;
 }
 
 .ban {
