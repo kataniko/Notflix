@@ -46,7 +46,7 @@ function Favs() {
 
                 <div>
                   <Link to={`/film/${item.id}`}>Show Details</Link>
-                  <Button onClick={excluirFilme} className='button' sx={{ color: "white", borderColor: "red", textDecoration: "none" }} color='error' variant="outlined">
+                  <Button onClick={() => excluirFilme(item.id)} className='button' sx={{ color: "white", borderColor: "red", textDecoration: "none" }} color='error' variant="outlined">
                     Delete
                   </Button>
 

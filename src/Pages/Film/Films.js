@@ -84,7 +84,7 @@ const Films = () => {
   }
 
   return (
-    <div>
+    <div className='fundo'>
       <Grid2 sx={{ margin: 2, display: "flex", justifyContent: "space-around" }} container spacing={6}>
         <motion.div initial={{ x: -100, opacity: 0, scale: 1, }} animate={{ x: 0, opacity: 1, scale: 1 }} transition={{ duration: 3, }}>
           <Box
@@ -169,7 +169,8 @@ const Films = () => {
             </div>
           </Card2>
         </motion.div>
-        <motion.div initial={{ x: 100, opacity: 0, scale: 1, }} animate={{ x: 0, opacity: 1, scale: 1 }} transition={{ duration: 3, }}>
+
+        <motion.div className='cardini3' initial={{ x: 100, opacity: 0, scale: 1, }} animate={{ x: 0, opacity: 1, scale: 1 }} transition={{ duration: 3, }}>
           <Box
             sx={{
               perspective: '1000px',

@@ -68,7 +68,18 @@ padding: 10px;
     background-size: 51% 51%;
 }
 @media (max-width: 600px) {
-  .card3{
-    margin-top: 150px;
+ 
+  .fundo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .card2{
+    margin: 0px 60px;
+  }
+  .cardini3{
+    margin-top: 50px;
   }
 }
